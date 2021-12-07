@@ -19,7 +19,12 @@ Instances are categorized in different datasets inside the 'resources/instances'
 You can just run the BMMSC.jar as follows. For easy of use there is an already compiled JAR inside the target folder.
 
 ```
-java -jar target/BMMSC.jar indexfile
+java -jar BMSSC.jar indexfile
+```
+
+Example: running with only new proposed instances:
+```
+java -jar BMSSC.jar resources/instances/new/index
 ```
 
 The index file contains a list of the instances to solve, with all the required data. Example:

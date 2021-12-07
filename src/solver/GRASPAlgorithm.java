@@ -14,7 +14,7 @@ public class GRASPAlgorithm implements Algorithm {
 
     /**
      * Create a new GRASPAlgorithm, @see algorithm
-     * @param i Tries, the algorythm will be executed i times, returns the best.
+     * @param i Tries, the algorithm will be executed i times, returns the best.
      * @param randomness Randomness, adjusts the candidate list size.
      *                   Takes values between [0,1] being 1 --> totally random, 0 --> full greedy.
      *                   Special Values:
@@ -33,7 +33,7 @@ public class GRASPAlgorithm implements Algorithm {
     }
 
     /**
-     * Executes the algorythm for the given instance
+     * Executes the algorithm for the given instance
      * @param ins Instance the algorithm will process
      * @return Best solution found
      */

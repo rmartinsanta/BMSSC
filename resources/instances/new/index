@@ -5,12 +5,12 @@
 #                                                        #
 ##########################################################
 
-Cardiotopography,2126,23,10
-MobileKSD,2855,71,56
-ozone0,2536,73,21
-seismicBumps,2584,15,19
-InternetAds,3279,1556,2
-PhonesAcc.reduced,2000,5,4
-PhonesGyro.reduced,2000,5,4
-WatchAcc.reduced,2000,5,4
-WatchGyro.reduced,2000,5,4
+resources/instances/new/Cardiotopography,2126,23,10
+resources/instances/new/MobileKSD,2855,71,56
+resources/instances/new/ozone0,2536,73,21
+resources/instances/new/seismicBumps,2584,15,19
+resources/instances/new/InternetAds,3279,1556,2
+resources/instances/new/PhonesAcc.reduced,2000,5,4
+resources/instances/new/PhonesGyro.reduced,2000,5,4
+resources/instances/new/WatchAcc.reduced,2000,5,4
+resources/instances/new/WatchGyro.reduced,2000,5,4

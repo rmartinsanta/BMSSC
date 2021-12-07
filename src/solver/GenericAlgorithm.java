@@ -16,7 +16,7 @@ public class GenericAlgorithm implements Algorithm{
 
     /**
      * Create a new GRASPAlgorithm, @see algorithm
-     * @param i Tries, the algorythm will be executed i times, returns the best.
+     * @param i Tries, the algorithm will be executed i times, returns the best.
      */
     public GenericAlgorithm(int i, Constructor constructor, Improver improver) {
         this.executions = i;
@@ -25,7 +25,7 @@ public class GenericAlgorithm implements Algorithm{
     }
 
     /**
-     * Executes the algorythm for the given instance
+     * Executes the algorithm for the given instance
      * @param ins Instance the algorithm will process
      * @return Best solution found
      */

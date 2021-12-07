@@ -8,23 +8,23 @@ import solver.improve.Improver;
 import java.util.Arrays;
 import java.util.List;
 
-public class GenericAlgorythmMulti extends GenericAlgorithm{
+public class GenericAlgorithmMulti extends GenericAlgorithm{
 
     List<Improver> improverList;
     /**
-     * Create a new GenericAlgorythmMulti, @see algorithm
+     * Create a new GenericAlgorithmMulti, @see algorithm
      *
-     * @param i           Tries, the algorythm will be executed i times, returns the best.
+     * @param i           Tries, the algorithm will be executed i times, returns the best.
      * @param constructor
      * @param improver
      */
-    public GenericAlgorythmMulti(int i, Constructor constructor, Improver... improver) {
+    public GenericAlgorithmMulti(int i, Constructor constructor, Improver... improver) {
         super(i, constructor, null);
         this.improverList = Arrays.asList(improver);
     }
 
     /**
-     * Executes the algorythm for the given instance
+     * Executes the algorithm for the given instance
      * @param ins Instance the algorithm will process
      * @return Best solution found
      */
@@ -41,7 +41,7 @@ public class GenericAlgorythmMulti extends GenericAlgorithm{
     }
 
     /**
-     * Executes the algorythm for the given instance
+     * Executes the algorithm for the given instance
      * @param ins Instance the algorithm will process
      * @return Best solution found
      */
@@ -60,7 +60,7 @@ public class GenericAlgorythmMulti extends GenericAlgorithm{
 
     @Override
     public String toString() {
-        return "GenericAlgorythmMulti{" +
+        return "GenericAlgorithmMulti{" +
                 "executions=" + executions +
                 ", constructor=" + constructor +
                 ", improvers=" + improverList +

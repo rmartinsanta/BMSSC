@@ -3,7 +3,6 @@ package solver.create;
 import model.Instance;
 import model.Solution;
 import model.StrategicSolution;
-import org.jetbrains.annotations.NotNull;
 import other.DoubleComparator;
 import other.RandomManager;
 
@@ -175,7 +174,7 @@ public class GRASPConstructor implements Constructor {
         }
 
         @Override
-        public int compareTo(@NotNull PointDistance pointDistance) {
+        public int compareTo(PointDistance pointDistance) {
 
             return Double.compare(cost, pointDistance.cost);
         }

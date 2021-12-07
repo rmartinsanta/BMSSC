@@ -11,14 +11,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-public class TimedAlgorythm implements Algorithm {
+public class TimedAlgorithm implements Algorithm {
 
     private List<Improver> improvers;
     private Constructor constructor;
     private long nanos;
 
     @SafeVarargs
-    public TimedAlgorythm(long time, TimeUnit unit, Supplier<Constructor> constructorSupplier, Supplier<Improver>... improvers) {
+    public TimedAlgorithm(long time, TimeUnit unit, Supplier<Constructor> constructorSupplier, Supplier<Improver>... improvers) {
         this.constructor = constructorSupplier.get();
         this.improvers = Arrays.stream(improvers).map(Supplier::get).collect(Collectors.toList());
         this.nanos = unit.toNanos(time);

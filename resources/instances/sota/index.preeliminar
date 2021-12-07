@@ -6,6 +6,6 @@
 #                                                        #
 ##########################################################
 
-r/Glass,214,9,7
-r/Libra,360,90,15
-r/CpuPerformance,209,8,5
+resources/instances/sota/Glass,214,9,7
+resources/instances/sota/Libra,360,90,15
+resources/instances/sota/CpuPerformance,209,8,5

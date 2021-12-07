@@ -4,20 +4,20 @@
 #    folder/instancefile,nPoints,nDimensions,nClusters   #
 ##########################################################
 
-body.csv,507,5,2
-breast_cancer.csv,569,30,2
-glass.csv,214,10,7
-glass.csv,214,9,7
-image_segmentation.csv,2310,19,7
-ionosphere.csv,351,34,2
-iris.csv,150,4,3
-libra.csv,360,90,15
-multiple_features_reduced.csv,2000,240,7
-synthetic_control.csv,600,60,6
-thyroid.csv,215,5,3
-user_knowledge.csv,403,5,4
-vehicle.csv,846,18,6
-vowel.csv,871,3,3
-water.csv,527,38,13
-wine.csv,178,13,3
-yeast.csv,1484,8,10
+resources/instances/sota/body.csv,507,5,2
+resources/instances/sota/breast_cancer.csv,569,30,2
+resources/instances/sota/glass.csv,214,10,7
+resources/instances/sota/glass.csv,214,9,7
+resources/instances/sota/image_segmentation.csv,2310,19,7
+resources/instances/sota/ionosphere.csv,351,34,2
+resources/instances/sota/iris.csv,150,4,3
+resources/instances/sota/libra.csv,360,90,15
+resources/instances/sota/multiple_features_reduced.csv,2000,240,7
+resources/instances/sota/synthetic_control.csv,600,60,6
+resources/instances/sota/thyroid.csv,215,5,3
+resources/instances/sota/user_knowledge.csv,403,5,4
+resources/instances/sota/vehicle.csv,846,18,6
+resources/instances/sota/vowel.csv,871,3,3
+resources/instances/sota/water.csv,527,38,13
+resources/instances/sota/wine.csv,178,13,3
+resources/instances/sota/yeast.csv,1484,8,10

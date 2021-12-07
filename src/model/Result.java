@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Arrays;
-
 /**
  * The result of the execution of an algorithm
  */
@@ -16,7 +14,7 @@ public class Result {
 
     private String instanceName;
 
-    private String algorythmName;
+    private String algorithmName;
 
 
     public Result(Solution s, long executionTime) {
@@ -33,8 +31,8 @@ public class Result {
         return this.instanceName;
     }
 
-    public Result setAlgorythmName(String algorythmName) {
-        this.algorythmName = algorythmName;
+    public Result setAlgorithmName(String algorithmName) {
+        this.algorithmName = algorithmName;
         return this;
     }
 
@@ -43,20 +41,14 @@ public class Result {
     }
 
 
-    public String getAlgorythmName() {
-        return this.algorythmName;
+    public String getAlgorithmName() {
+        return this.algorithmName;
     }
 
-    //    public String toString(){
-//        return "Instance Name: " + this.instanceName
-//                + "\nAlgorythm Used: " + this.algorythmName
-//                + "\nCalculated Value: "+ this.s.getOptimalValue()
-//                + "\nExecution Time (ms): " + (this.execTime / (double) 1000000)
-//                + "\n---------------------------------------------------------";
-//    }
+
     public String toString() {
         return "Instance Name: " + this.instanceName
-                + "\nAlgorythm Used: " + this.algorythmName
+                + "\nAlgorithm Used: " + this.algorithmName
                 + (this.s.getObvbeforeimprv() != -1 ? ("\nOB Value Bef. Imprv.: " + Double.toString(this.s.getObvbeforeimprv()).replace('.', ',')) : "")
                 + "\nCalculated Value: " + Double.toString(this.s.getOptimalValue()).replace('.', ',')
                 + "\nExecution Time (ms): " + Double.toString(this.execTime / (double) 1000000).replace('.', ',')

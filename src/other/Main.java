@@ -3,7 +3,7 @@ package other;
 import model.Instance;
 import model.Result;
 import solver.Algorithm;
-import solver.GenericAlgorythmMulti;
+import solver.GenericAlgorithmMulti;
 import solver.create.GRASPConstructor;
 import solver.improve.FirstImpLS;
 import solver.improve.StrategicOscillation;
@@ -18,8 +18,6 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class Main {
-
-    public static final double RANDOMNESS = Double.MIN_VALUE;
 
 //    static Algorithm[] exp1 = {
 //            new ReallyGreedyAlgorithm(1),
@@ -56,24 +54,28 @@ public class Main {
 //    };
 //
 //    static Algorithm[] exp4 = {
-//            new GenericAlgorythmMulti(1000, new GRASPConstructor(RANDOMNESS, 2f), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS())
+//            new GenericAlgorithmMulti(1000, new GRASPConstructor(RANDOMNESS, 2f), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS())
 //    };
 //
 //    static Algorithm[] exp5 = {
-//            //new TimedAlgorythm(10, TimeUnit.SECONDS, () -> new GRASPConstructor(RANDOMNESS, 1f), FirstImpLS::new, StrategicOscillation::new, FirstImpLS::new)
-//            // no me acuerdo si era 0.75 o 1 el valor para el margen de OSC ESTRTAT
-//            new GenericAlgorythmMulti(100, new GRASPConstructor(RANDOMNESS, 0.75f), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS())
+//            //new TimedAlgorithm(10, TimeUnit.SECONDS, () -> new GRASPConstructor(RANDOMNESS, 1f), FirstImpLS::new, StrategicOscillation::new, FirstImpLS::new)
+//            new GenericAlgorithmMulti(100, new GRASPConstructor(RANDOMNESS, 0.75f), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS())
 //    };
 
     // sensitivity analysis experiment
     static Algorithm[] exp6 = {
-            new GenericAlgorythmMulti(100, new GRASPConstructor(0.75, 0.75f), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS())
+            new GenericAlgorithmMulti(100, new GRASPConstructor(0.75, 0.75f), new FirstImpLS(), new StrategicOscillation(), new FirstImpLS())
     };
 
     static List<Result> results = new ArrayList<>();
 
     public static void main(String[] s) throws IOException {
-        loadIndex(s[0], Main::executeAlgorythmsForInstance);
+        if(s.length != 1){
+            System.out.println("Usage: java -jar file.jar path/to/indexfile");
+            System.exit(-1);
+        }
+        System.out.println("Solver started, please wait for results...");
+        loadIndex(s[0], Main::executeAlgorithmsForInstance);
         printTable(results);
         exportToDisk(results);
     }
@@ -106,12 +108,21 @@ public class Main {
         }
     }
 
-    private static void executeAlgorythmsForInstance(String line) {
+    private static void executeAlgorithmsForInstance(String line) {
         Instance ins = new Instance(line.split(","));
 
-        for (Algorithm algorythm : exp6) {
+        for (Algorithm algorithm : exp6) {
+                Result r = algorithm.execute(ins).setInstanceName(ins.getName()).setAlgorithmName(algorithm.getClass().toString());
+                results.add(r);
+                System.out.println(r);
+        }
+    }
+
+    private static void executeForInstanceSensitivity(String line) {
+        Instance ins = new Instance(line.split(","));
+        for (Algorithm algorithm : exp6) {
             for (int i = 0; i < 30; i++) {
-                Result r = algorythm.execute(ins).setInstanceName(ins.getName() + i).setAlgorythmName(algorythm.getClass().toString());
+                Result r = algorithm.execute(ins).setInstanceName(ins.getName() + i).setAlgorithmName(algorithm.getClass().toString());
                 results.add(r);
                 System.out.println(r);
             }
