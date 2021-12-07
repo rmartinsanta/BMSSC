@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'multiple_features'
+		set terminal postscript color 'Helvetica' 
+		set output 'multiple_features-qq.ps'
+		plot "multiple_features-el.dat" t "empirical" w points, "multiple_features-tl.dat" t "estimated" with lines, "multiple_features-ul.dat" t "+1 std dev range" w lines, "multiple_features-ll.dat" t "-1 std dev range" w lines 
+		quit

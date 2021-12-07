@@ -1,0 +1,7 @@
+FAIL
+Error in i[1, , drop = FALSE]: subscript out of bounds
+Traceback:
+
+1. hcot(dist(X), 1, method = "single")
+
+

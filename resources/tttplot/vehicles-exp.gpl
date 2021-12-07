@@ -1,0 +1,11 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+                set yrange [0:1]
+		set key right bottom
+                set grid
+		set title 'vehicles'
+		set terminal postscript color 'Helvetica'
+		set output 'vehicles-exp.ps'
+		plot "vehicles-ee.dat" t "empirical" w points, "vehicles-te.dat" t "theoretical" w lines
+		quit

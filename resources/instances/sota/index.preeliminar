@@ -1,0 +1,11 @@
+##########################################################
+#                                                        #
+#            ALGORITHM INPUT INSTANCES                   #
+#             PREELIMINAR EXPERIMENTS                    #
+#      r/InstanceName,nPoints,nDimensions,nClusters      #
+#                                                        #
+##########################################################
+
+r/Glass,214,9,7
+r/Libra,360,90,15
+r/CpuPerformance,209,8,5

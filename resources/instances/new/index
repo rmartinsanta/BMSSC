@@ -1,0 +1,16 @@
+##########################################################
+#                                                        #
+#            ALGORITHM INPUT INSTANCES                   #
+#    folder/instancefile,nPoints,nDimensions,nClusters   #
+#                                                        #
+##########################################################
+
+Cardiotopography,2126,23,10
+MobileKSD,2855,71,56
+ozone0,2536,73,21
+seismicBumps,2584,15,19
+InternetAds,3279,1556,2
+PhonesAcc.reduced,2000,5,4
+PhonesGyro.reduced,2000,5,4
+WatchAcc.reduced,2000,5,4
+WatchGyro.reduced,2000,5,4

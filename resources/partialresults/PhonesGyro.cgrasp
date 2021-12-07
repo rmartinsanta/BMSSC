@@ -1,0 +1,10 @@
+>> [score clusters] = CGRASP_clu('n/PhonesGyro',2000,5,4,13.72, 30, 0.1, 0.5)
+Index in position 2 exceeds array bounds (must not exceed 3).
+
+Error in dlmread (line 159)
+        result= result(:,1:ncols);
+
+Error in CGRASP_clu (line 24)
+   data = dlmread(data_path,',',range); % reads the dataset
+
+

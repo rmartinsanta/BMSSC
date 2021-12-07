@@ -1,0 +1,11 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+                set yrange [0:1]
+		set key right bottom
+                set grid
+		set title 'image_segmentation'
+		set terminal postscript color 'Helvetica'
+		set output 'image_segmentation-exp.ps'
+		plot "image_segmentation-ee.dat" t "empirical" w points, "image_segmentation-te.dat" t "theoretical" w lines
+		quit

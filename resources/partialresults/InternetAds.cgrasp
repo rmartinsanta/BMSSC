@@ -1,0 +1,12 @@
+>> [score clusters] = CGRASP_clu('n/InternetAds',3279,1556,2,24.41, 30, 0.1, 0.5)
+Index in position 2 exceeds array bounds (must not exceed 1555).
+
+Error in dlmread (line 159)
+        result= result(:,1:ncols);
+
+Error in CGRASP_clu (line 24)
+   data = dlmread(data_path,',',range); % reads the dataset
+ 
+>> 
+
+

@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'vehicles'
+		set terminal postscript color 'Helvetica' 
+		set output 'vehicles-qq.ps'
+		plot "vehicles-el.dat" t "empirical" w points, "vehicles-tl.dat" t "estimated" with lines, "vehicles-ul.dat" t "+1 std dev range" w lines, "vehicles-ll.dat" t "-1 std dev range" w lines 
+		quit

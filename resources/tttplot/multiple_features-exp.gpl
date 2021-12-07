@@ -1,0 +1,11 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+                set yrange [0:1]
+		set key right bottom
+                set grid
+		set title 'multiple_features'
+		set terminal postscript color 'Helvetica'
+		set output 'multiple_features-exp.ps'
+		plot "multiple_features-ee.dat" t "empirical" w points, "multiple_features-te.dat" t "theoretical" w lines
+		quit

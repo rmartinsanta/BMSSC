@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'image_segmentation'
+		set terminal postscript color 'Helvetica' 
+		set output 'image_segmentation-qq.ps'
+		plot "image_segmentation-el.dat" t "empirical" w points, "image_segmentation-tl.dat" t "estimated" with lines, "image_segmentation-ul.dat" t "+1 std dev range" w lines, "image_segmentation-ll.dat" t "-1 std dev range" w lines 
+		quit
