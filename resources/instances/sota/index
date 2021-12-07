@@ -6,7 +6,6 @@
 
 resources/instances/sota/body.csv,507,5,2
 resources/instances/sota/breast_cancer.csv,569,30,2
-resources/instances/sota/glass.csv,214,10,7
 resources/instances/sota/glass.csv,214,9,7
 resources/instances/sota/image_segmentation.csv,2310,19,7
 resources/instances/sota/ionosphere.csv,351,34,2

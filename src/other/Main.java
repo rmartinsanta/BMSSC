@@ -77,7 +77,7 @@ public class Main {
         System.out.println("Solver started, please wait for results...");
         loadIndex(s[0], Main::executeAlgorithmsForInstance);
         printTable(results);
-        exportToDisk(results);
+        //exportToDisk(results);
     }
 
     public static void loadIndex(String indexPath, Consumer<String> method) throws IOException {
@@ -91,7 +91,7 @@ public class Main {
     private static void exportToDisk(List<Result> results) {
         for(Result r: results){
             String output = r.getInstanceName().split("/")[1] + ".out";
-            File f = new File("output/" + output);
+            File f = new File(output);
             var data = r.s.getSolution();
             StringBuilder sb = new StringBuilder();
             try (var writer = new FileWriter(f)) {
