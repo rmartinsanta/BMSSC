@@ -15,6 +15,7 @@ public class Result {
     private String instanceName;
 
     private String algorithmName;
+    private int repetition;
 
 
     public Result(Solution s, long executionTime) {
@@ -47,11 +48,14 @@ public class Result {
 
 
     public String toString() {
-        return "Instance Name: " + this.instanceName
-                /*+ "\nAlgorithm Used: " + this.algorithmName*/
-                /*+ (this.s.getObvbeforeimprv() != -1 ? ("\nOB Value Bef. Imprv.: " + Double.toString(this.s.getObvbeforeimprv()).replace('.', ',')) : "")*/
-                + "\nCalculated Value: " + Double.toString(this.s.getOptimalValue()).replace('.', ',')
-                + "\nExecution Time (ms): " + Double.toString(this.execTime / (double) 1000000).replace('.', ',')
-                + "\n---------------------------------------------------------";
+        return "%s,%s,%s,%s,%s".formatted(getInstanceName(), getAlgorithmName(), this.repetition, this.s.getOptimalValue(), this.execTime / (double) 1_000_000_000);
+    }
+
+    public void setRepetitions(int repetition) {
+        this.repetition = repetition;
+    }
+
+    public int getRepetition(){
+        return this.repetition;
     }
 }

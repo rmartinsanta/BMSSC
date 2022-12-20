@@ -60,11 +60,12 @@ public class GenericAlgorithmMulti extends GenericAlgorithm{
 
     @Override
     public String toString() {
-        return "GenericAlgorithmMulti{" +
-                "executions=" + executions +
-                ", constructor=" + constructor +
-                ", improvers=" + improverList +
-                '}';
+        return "PaperAlgorithm";
+//        return "GenericAlgorithmMulti{" +
+//                "executions=" + executions +
+//                ", constructor=" + constructor +
+//                ", improvers=" + improverList +
+//                '}';
     }
 
 }
