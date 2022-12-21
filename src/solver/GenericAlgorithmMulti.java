@@ -47,14 +47,24 @@ public class GenericAlgorithmMulti extends GenericAlgorithm{
      */
     @Override
     public Solution algorithm(Instance ins) {
+        long start = System.nanoTime();
+        long current = System.nanoTime();
         Solution s = construct(ins);
+        status("Const 0: \t", current, start);
         for (int i = 1; i < executions; i++) {
+            current = System.nanoTime();
             Solution temp = construct(ins);
+            status("Const " + i + ": \t", current, start);
             if (temp.getOptimalValue() < s.getOptimalValue())
                 s = temp;
         }
         Solution improveMe = s;
-        improverList.forEach(x -> x.improve(improveMe, 300));
+        for (int i = 0; i < improverList.size(); i++) {
+            Improver x = improverList.get(i);
+            current = System.nanoTime();
+            x.improve(improveMe, 300);
+            status("Impr " + i + ": \t", current, start);
+        }
         return improveMe;
     }
 
@@ -68,4 +78,8 @@ public class GenericAlgorithmMulti extends GenericAlgorithm{
 //                '}';
     }
 
+    private static void status(String s, long current, long start){
+        var now = System.nanoTime();
+        System.out.println(s + ((now - current) / (double) 1_000_000) + " \t" + (now - start) / (double) 1_000_000);
+    }
 }

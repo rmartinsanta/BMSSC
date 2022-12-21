@@ -5,12 +5,5 @@
 #                                                        #
 ##########################################################
 
-resources/instances/new/Cardiotopography,2126,23,10
-resources/instances/new/MobileKSD,2855,71,56
-resources/instances/new/ozone0,2536,73,21
-resources/instances/new/seismicBumps,2584,15,19
 resources/instances/new/InternetAds,3279,1556,2
-resources/instances/new/PhonesAcc,2000,5,4
-resources/instances/new/PhonesGyro,2000,5,4
-resources/instances/new/WatchAcc,2000,5,4
-resources/instances/new/WatchGyro,2000,5,4
+
